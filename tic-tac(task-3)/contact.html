@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Tic-Tac</title>
+    <link rel="stylesheet" href="./design/index.css">
+    <link rel="stylesheet" href="./design/about.css">
+    <link rel="stylesheet" href="./design/contact.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-brand">Tic-Tac Game</div>
+        <ul class="navbar-nav">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="contact-section">
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you! Whether you have a question, feedback, or just want to say hello, feel free to reach out to us.</p>
+        <h2>Contact Information</h2>
+        <ul>
+            <li>Email: <a href="mailto:support@tictacgame.com">support@tictacgame.com</a></li>
+            <li>Phone: +91 9426731127</li>
+            <li>Address: 123 Tic-Tac Lane, Game City, india</li>
+        </ul>
+        <h2>Follow Us</h2>
+        <ul class="social-links">
+            <li><a href="https://www.facebook.com/tictacgame" target="_blank">Facebook</a></li>
+            <li><a href="https://www.twitter.com/tictacgame" target="_blank">Twitter</a></li>
+            <li><a href="https://www.instagram.com/tictacgame" target="_blank">Instagram</a></li>
+        </ul>
+        <h2>Send Us a Message</h2>
+        <form name="submit-to-google-sheet" method="post" class="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxqcN-JKJ1i3_2rTZhr0bXgxe6Jfu_hk0-C-wk2udGVXmbyvgraGrDprt0lQT1WMNg/exec';
+            const form = document.forms['submit-to-google-sheet'];
+
+            if (!form) {
+                console.error('Form not found!');
+                return;
+            }
+
+            form.addEventListener('submit', e => {
+                e.preventDefault();
+                console.log('Form submitted');
+
+                fetch(scriptURL, {
+                        method: 'POST',
+                        body: new FormData(form)
+                    })
+                    .then(response => {
+                        console.log('Response received:', response);
+                        if (response.ok) {
+                            setTimeout(() => {
+                                alert("Your message has been sent successfully");
+                            }, 10);
+                            form.reset();
+                        } else {
+                            console.error('Response error:', response.statusText);
+                        }
+                    })
+                    .catch(error => console.error('Fetch error!', error.message));
+            });
+        });
+    </script>
+</body>
+
+</html>
