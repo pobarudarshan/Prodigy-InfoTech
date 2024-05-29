@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <title>Amul Website</title>
+    <link rel="stylesheet" href="./index.css">
+    <style>
+        /* Define more attractive animation classes */
+        
+        .slide-in-bottom {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+        
+        .slide-in-bottom.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .card {
+            position: relative;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        /* Product details */
+        
+        .product-details {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 300px;
+            /* Adjust the width as needed */
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 20px;
+            display: none;
+            z-index: 10;
+            text-align: center;
+            /* Center the text */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            /* Add a light shadow */
+        }
+        
+        .card:hover .product-details {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <nav>
+            <a href="#">Amul</a>
+            <div class="cntr-nav">
+                <a href="#amul-cut">Home</a>
+                <a href="#product">Products</a>
+                <a href="#product">Shop</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <i class="ri-menu-fill"></i>
+        </nav>
+        <div class="one">
+            <h1>AMUL</h1>
+            <img decoding="async" id="amul-cut" src="Assets/amul_All.webp" class="card animate__animated animate__fadeIn fade-in-left" alt="Amul Products">
+        </div>
+        <div class="two">
+            <div class="lft-two">
+                <img src="Assets/amul_flavour.jpg" class="card animate__animated animate__fadeIn fade-in-left" alt="Amul_flavour">
+            </div>
+            <div class="rght-two">
+                <h1>Flavour Updated</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, excepturi sed, itaque placeat id natus soluta veniam obcaecati qui a laborum laboriosam dolorem illum labore sit, voluptates commodi neque dolores tempore temporibus deleniti?
+                    Nobis, ratione hic error quis cum neque nulla laudantium nostrum sit nihil dolorum quisquam enim quaerat, eaque ex sequi, harum totam quia non! Labore, neque! Amet voluptatem illo similique recusandae! Ex quaerat quibusdam asperiores,
+                    ducimus tempore magni labore. Tenetur voluptas, quos ex repellendus provident mollitia laboriosam adipisci alias a impedit, cum accusamus rerum delectus eaque facilis veniam quia laborum incidunt ea assumenda! Eos magni aspernatur
+                    quod distinctio.
+                </p>
+            </div>
+        </div>
+        <div class="three" id="product">
+            <div class="card animate__animated">
+                <img decoding="async" class="milk" src="Assets/amul_milk.jpg" alt="Milk">
+                <h1>Milk</h1>
+                <button>Buy Now</button>
+                <div class="product-details">
+                    <p>Amul Milk, sourced from select dairy farms, is known for its purity and freshness. It undergoes rigorous quality checks to ensure safety and nutrition. Available in different variants like full cream, toned, and double-toned, Amul
+                        Milk caters to diverse dietary needs.</p>
+                </div>
+            </div>
+            <div class="card animate__animated animate__fadeIn fade-in-left">
+                <img decoding="async" id="kiil" src="Assets/amul_butter.jpg" alt="Butter">
+                <h1>Butter</h1>
+                <button>Buy Now</button>
+                <div class="product-details">
+                    <p>
+                        <div class="product-details">
+                            <p>Amul butter, made from pasteurized cream and salt, is known for its rich, creamy taste and smooth texture. It is available in various sizes, from small individual packs to larger family packs. The brand is iconic in India,
+                                recognized for its "Utterly Butterly Delicious" tagline and the Amul Girl mascot. Widely used for spreading, cooking, and baking, Amul butter is a staple in Indian households..</p>
+                        </div>
+                    </p>
+                </div>
+            </div>
+            <div class="card animate__animated animate__fadeIn fade-in-left">
+                <img decoding="async" id="dahi" src="Assets/amul_dahi.jpg" alt="Dahi">
+                <h1>Dahi</h1>
+                <button>Buy Now</button>
+                <div class="product-details">
+                    <p>Amul Dahi, a product of the Gujarat Cooperative Milk Marketing Federation (GCMMF), is a popular and trusted brand of yogurt in India. It is made from pasteurized, homogenized toned milk, offering a creamy texture and a mildly tangy
+                        flavor. Available in various sizes, Amul Dahi is commonly used in Indian households for direct consumption, in recipes, and for preparing traditional dishes like raita and lassi. It is known for its high quality and consistent
+                        taste.
+                    </p>
+                </div>
+            </div>
+            <div class="card animate__animated animate__fadeIn slide-in-bottom">
+                <img decoding="async" class="icecreem" src="Assets/amul_icecreem.jpg" alt="Icecream">
+                <h1>Icecream</h1>
+                <button>Buy Now</button>
+                <div class="product-details">
+                    <p>Amul Ice Cream, produced by the Gujarat Cooperative Milk Marketing Federation (GCMMF), is renowned for its rich, creamy texture and wide range of flavors. Made from fresh milk and natural ingredients, it is a popular choice in India
+                        for its quality and taste. Amul offers various varieties, including classic flavors, fruit-based options, and innovative combinations.
+                    </p>
+                </div>
+            </div>
+            <div class="card animate__animated ">
+                <img decoding="async" class="ghee" src="Assets/amul_ghee.webp" alt="Ghee">
+                <h1>Ghee</h1>
+                <button>Buy Now</button>
+                <div class="product-details">
+                    <p>Amul Ghee, produced by the Gujarat Cooperative Milk Marketing Federation (GCMMF), is made from high-quality butter derived from pure cow's milk. It is known for its rich aroma, granular texture, and authentic taste, making it a staple
+                        in Indian cooking and rituals. Available in various sizes, Amul Ghee is used for frying, as a condiment, and in traditional sweets.
+                    </p>
+                </div>
+            </div>
+            <div class="card animate__animated animate__fadeIn slide-in-bottom">
+                <img decoding="async" class="chaas" src="Assets/amul_chaas.jpg" alt="Chaas">
+                <h1>Chaas</h1>
+                <button>Buy Now</button>
+                <div class="product-details">
+                    <p>Amul Chaas, also known as Amul Buttermilk, is a refreshing, lightly spiced beverage made from curd. It's known for its cooling properties and digestive benefits, making it a popular choice in India, especially during hot weather. Amul
+                        Chaas is available in convenient, ready-to-drink packaging, perfect for on-the-go consumption.
+                    </p>
+                </div>
+            </div>
+            <div class="card animate__animated animate__fadeIn slide-in-bottom">
+                <img decoding="async" class="cream" src="Assets/amul_cream.jpg" alt="Cream">
+                <h1>Cream</h1>
+                <button>Buy Now</button>
+                <div class="product-details">
+                    <p>Amul Fresh Cream is made from high-quality milk, offering a rich and creamy texture suitable for various culinary uses. It is commonly used in both sweet and savory dishes, including desserts, soups, and sauces. Available in convenient
+                        tetra packs, Amul Fresh Cream ensures long shelf life and easy storage.
+                    </p>
+                </div>
+            </div>
+            <div class="card animate__animated animate__fadeIn slide-in-bottom">
+                <img decoding="async" class="chocolate" src="Assets/amul_choclate.webp" alt="Chocolate">
+                <h1>Chocolate</h1>
+                <button>Buy Now</button>
+                <div class="product-details">
+                    <p>Amul Chocolate is made from high-quality cocoa and milk, offering a rich and smooth taste. It comes in various flavors, including dark, milk, and fruit & nut, catering to different preferences. Known for its premium quality, Amul Chocolate
+                        is a popular choice for both gifting and personal indulgence.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Us Section -->
+    <div id="contact" class="contact-us">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>About Amul</h2>
+                <p>Amul is an Indian dairy cooperative society, based at Anand in the state of Gujarat. Formed in 1946, it is a brand managed by a cooperative body, the Gujarat Co-operative Milk Marketing Federation Ltd. (GCMMF), which today is jointly owned
+                    by 3.6 million milk producers in Gujarat.</p>
+            </div>
+            <div class="footer-section links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h2>Contact Info</h2>
+                <ul>
+                    <li>Email: support@amul.com</li>
+                    <li>Phone: +91-1234567890</li>
+                    <li>Address: Amul Dairy, Anand, Gujarat, India</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 Amul. All rights reserved.
+        </div>
+    </footer>
+</body>
+
+<script>
+    // Function to check if an element is in the viewport
+    function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    // Function to handle animations based on intersection with viewport
+    function animateOnScroll() {
+        // Get all elements with animation classes
+        const animatedElements = document.querySelectorAll('.animate__animated');
+
+        // Loop through each element
+        animatedElements.forEach(element => {
+            // Check if the element is in the viewport
+            if (isInViewport(element)) {
+                // Add the 'visible' class to trigger the animation
+                element.classList.add('visible');
+            }
+        });
+    }
+
+    // Add scroll event listener to trigger animation
+    window.addEventListener('scroll', animateOnScroll);
+
+    // Trigger animation on initial load
+    animateOnScroll();
+
+    // Add click event listener to toggle product details visibility
+    const buyNowButtons = document.querySelectorAll('.buy-now');
+    buyNowButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const productDetails = this.nextElementSibling;
+            productDetails.style.display = productDetails.style.display === 'block' ? 'none' : 'block';
+        });
+    });
+
+    var tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".two",
+            start: "0% 95%",
+            end: "70% 50%",
+            scrub: true,
+        }
+    })
+
+    tl.to("#amul-cut", {
+        top: "160%",
+        left: "23%"
+    })
+</script>
+
+</html>

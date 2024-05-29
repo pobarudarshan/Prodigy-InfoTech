@@ -1,0 +1,252 @@
+/* index.css */
+
+
+/* General styles */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333333;
+}
+
+
+/* Navigation styles */
+
+nav {
+    background-color: #aec0f2;
+    /* Amul Red */
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 2em;
+    align-items: center;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 1em;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* Section one styles */
+
+.one {
+    text-align: center;
+    padding: 2em 0;
+    background-color: #f5f5f5;
+}
+
+.one h1 {
+    color: #e30613;
+    /* Amul Red */
+    font-size: 3em;
+    margin-bottom: 1em;
+}
+
+.one img {
+    margin: 0.5em;
+    width: 80%;
+    height: auto;
+    max-width: 800px;
+    /* Ensure the image doesn't get too large */
+}
+
+
+/* Section two styles */
+
+.two {
+    display: flex;
+    padding: 2em;
+    background-color: #ffffff;
+}
+
+.lft-two,
+.rght-two {
+    flex: 1;
+    padding: 1em;
+}
+
+.rght-two h1 {
+    color: #e30613;
+    /* Amul Red */
+    font-size: 2em;
+}
+
+.rght-two p {
+    color: #333333;
+    line-height: 1.5;
+}
+
+
+/* Section three styles */
+
+.three {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* Allow wrapping for responsiveness */
+    padding: 2em;
+    background-color: #f5f5f5;
+}
+
+.card {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    padding: 1em;
+    text-align: center;
+    width: calc(50% - 1em);
+    /* Set width to 50% of the container minus padding */
+    max-width: 300px;
+    /* Limit maximum width */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2em;
+    /* Increased margin for better spacing between cards */
+    position: relative;
+    /* Ensure button positioning is relative to the card */
+}
+
+.card h1 {
+    color: #e30613;
+    font-size: 1.5em;
+    margin: 0;
+    /* Remove margin to avoid pushing elements apart */
+    padding-bottom: 0.5em;
+    /* Add padding to create space between heading and button */
+    position: absolute;
+    /* Position heading absolutely */
+    top: 0.1em;
+    /* Adjust as needed */
+    left: 50%;
+    /* Align heading horizontally */
+    transform: translateX(-50%);
+    /* Center heading horizontally */
+    width: 100%;
+    /* Ensure heading takes full width */
+}
+
+.card button {
+    position: absolute;
+    /* Position button absolutely */
+    bottom: 1em;
+    /* Adjust as needed */
+    left: 50%;
+    /* Align button horizontally */
+    transform: translateX(-50%);
+    /* Center button horizontally */
+    background-color: #0074cc;
+    color: #ffffff;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.card button:hover {
+    background-color: #005fa3;
+    /* Darker Amul Blue */
+}
+
+.card img {
+    margin-bottom: 1em;
+    width: 100%;
+    height: auto;
+}
+
+
+/* Contact Us section styles */
+
+.contact-us {
+    padding: 2em;
+    background-color: #f5f5f5;
+}
+
+.contact-us h2 {
+    color: #e30613;
+    /* Amul Red */
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.contact-us form {
+    display: grid;
+    grid-gap: 1em;
+}
+
+.contact-us label {
+    font-weight: bold;
+}
+
+.contact-us input,
+.contact-us textarea {
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-us button {
+    background-color: #0074cc;
+    /* Amul Blue */
+    color: #ffffff;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact-us button:hover {
+    background-color: #005fa3;
+    /* Darker Amul Blue */
+}
+
+
+/* Footer section styles */
+
+footer {
+    background-color: #333333;
+    color: #ffffff;
+    padding: 2em;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* Allow wrapping for responsiveness */
+}
+
+.footer-section {
+    flex: 1 1 300px;
+    /* Minimum width of 300px, flexible */
+    margin-bottom: 2em;
+}
+
+.footer-section h2 {
+    color: #e30613;
+    /* Amul Red */
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5em;
+}
+
+.footer-bottom {
+    text-align: center;
+    background-color: #1f1f1f;
+    padding: 1em 0;
+}
